@@ -1,5 +1,7 @@
 #pragma once
 
+#ifdef __vita__
+
 #ifndef _VITA_DEFS_H
 #define _VITA_DEFS_H
 
@@ -17,7 +19,7 @@ extern "C"
 #include <sys/stat.h>
 #include <vitasdk.h>
 
-#include "sysfuncs.h"
+#include "vita_sysfuncs.h"
 
 #define CWD "ux0:/data/xash3d"
 #define PATH_MAX 256
@@ -69,3 +71,5 @@ FILE *vita_fopen( const char *name, const char *mode );
 #endif
 
 #endif
+
+#endif // __vita__
